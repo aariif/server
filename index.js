@@ -5,4 +5,6 @@ app.get(('/'), (req, res) => {
   res.send({name: 'Zahra'});
 });
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000 ,function(){
+    console.log("up and running on port "+process.env.PORT);
+});
